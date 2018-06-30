@@ -9,6 +9,7 @@ class Shoe
     BRANDS << brand
     BRANDS.any? {|x| if x == @brand
       BRANDS.delete(@brand)
+    end
     }
   end
 
