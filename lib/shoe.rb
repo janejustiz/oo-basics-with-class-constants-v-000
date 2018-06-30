@@ -6,10 +6,10 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS.each do |x|
-      if brand != x
-        BRANDS << brand
-      end
+    BRANDS.any? do |word|
+      if word == @brand
+      else
+        BRANDS << @brand
     end
   end
 
@@ -17,4 +17,5 @@ class Shoe
     self.condition = "new"
     puts "Your shoe is as good as new!"
   end
+
 end
