@@ -7,6 +7,9 @@ class Shoe
   def initialize(brand)
     @brand = brand
     BRANDS << brand
+    if @brand == BRANDS.any?
+      BRANDS.delete(@brand)
+    end
   end
 
   def cobble
@@ -14,9 +17,4 @@ class Shoe
     puts "Your shoe is as good as new!"
   end
 
-  def remove
-    if BRANDS.any? {|x| x = self}
-      BRANDS.delete(self)
-    end
-  end
 end
