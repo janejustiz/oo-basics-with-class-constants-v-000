@@ -8,7 +8,7 @@ class Shoe
     @brand = brand
     BRANDS << brand
     if BRANDS.any?{|x| x == @brand} == true
-      BRANDS.delete(@brand)
+      BRANDS.delete(brand)
     end
   end
 
