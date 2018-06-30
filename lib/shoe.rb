@@ -6,16 +6,18 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS.any? do |word|
-      if word == @brand
-      else
-        BRANDS << @brand
-      end
-    end
+    BRANDS << @brand
+    remove
   end
 
   def cobble
     self.condition = "new"
     puts "Your shoe is as good as new!"
+  end
+
+  def remove
+    if BRANDS.any? {|x| x = self}
+      BRANDS.delete(self)
+    end
   end
 end
